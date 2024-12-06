@@ -432,3 +432,39 @@ function oldAndLoud(person){
     person.name = person.name.toUpperCase();
 }
 oldAndLoud(user);
+
+// Define an object called cat1 that contains the following properties: name, breed, age (a number)
+const cat1 = {
+    name: "Sam",
+    breed: "Tabby",
+    age: 15
+};
+
+// console.log the cat's age
+console.log(cat1.age);
+
+// console.log the cat's breed
+console.log(cat1.breed);
+
+// Define an object called cat2 that also contains the properties: name, breed, age (a number)
+const cat2 = {
+    name: "Percy",
+    breed: "Shorthair",
+    age: 7
+};
+
+// Write a function combineCats that has two parameters mama, and papa. The function will take two arguments -- each a cat object.
+// Pass cat1 and cat2 as arguments to the combineCats function. The function should console.log them.
+// Make it so the combineCats function will return a combination of the two incoming cats
+function combineCats(mama, papa){
+    const newCat = {
+        name: mama.name + papa.name,
+        breed: mama.breed + "-" + papa.breed,
+        age: 1
+    };
+    return newCat;
+}
+console.log(combineCats(cat1, cat2));
+
+// Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
+console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)), combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2))));
